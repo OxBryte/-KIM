@@ -1,0 +1,11 @@
+.text-color{
+    text-shadow: -4px 6px 0 #000;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #000;
+}
+.text-color1{
+    text-shadow: -4px 6px 0 #000;
+}
+.bg001{
+    box-shadow: -4px 6px 0 #000;
+}
