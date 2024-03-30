@@ -7,11 +7,26 @@ import {
   Image,
   Text,
   VStack,
+  useToast,
 } from "@chakra-ui/react";
+import ContainLayout from "./layout/container";
+import copyToClipboard from "./util";
 
 export default function Home() {
+  const toast = useToast();
+
   return (
     <Box>
+      <ContainLayout>
+        <Flex py="24px" align="center" justify="space-between">
+          <Text fontWeight={800} fontSize={24} color="#9971D4">
+            $KIM
+          </Text>
+          <Button px="32px" bg="#9971D4" _hover={{ bg: "brand.100" }}>
+            Buy Now
+          </Button>
+        </Flex>
+      </ContainLayout>
       <Flex align="center" justify="center" py="80px" w="full" px="24px">
         <Box w="1100px">
           <Image src="/kim.png" alt="" />
@@ -55,7 +70,20 @@ export default function Home() {
               bg="white"
               px="16px"
               py="6px"
+              cursor='pointer'
               fontSize={24}
+              onClick={() =>
+                copyToClipboard(
+                  "0xE1aBD004250AC8D1F199421d647e01d094FAa180",
+                  toast({
+                    title: "Contract address copied",
+                    // description: "We've created your account for you.",
+                    status: "success",
+                    duration: 9000,
+                    isClosable: true,
+                  })
+                )
+              }
             >
               copy
             </Box>
@@ -79,36 +107,95 @@ export default function Home() {
         borderBottomWidth="5px"
         borderColor="black"
       >
-        <Flex w="full" h="full" align="center" justify="center" gap="24px" overflow={'hidden'}>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
-          <Text color='white' fontSize='28'>$KIM</Text>
+        <Flex
+          w="full"
+          h="full"
+          align="center"
+          justify="center"
+          gap="24px"
+          overflow={"hidden"}
+        >
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
+          <Text color="white" fontSize="28">
+            $KIM
+          </Text>
         </Flex>
       </Box>
-      <VStack align="center" gap="36px" my="60px" px='32px'>
+      <VStack align="center" gap="36px" my="60px" px="32px">
         <Heading color="white" className="text-color" fontSize={[32, 64]}>
           How To Buy
         </Heading>
@@ -176,13 +263,16 @@ export default function Home() {
             roundedTopLeft={16}
             className="bg001"
           >
-            <Text textAlign='center' color="#9971D4" fontSize={24}>
-              Trade $SOL for $KIM on Jupiter
+            <Text textAlign="center" color="#9971D4" fontSize={24}>
+              Trade $SOL for $KIM on Jupiter
             </Text>
-            <Button px='32px' bg='#9971D4' _hover={{bg: 'brand.100'}}>TRADE</Button>
+            <Button px="32px" bg="#9971D4" _hover={{ bg: "brand.100" }}>
+              TRADE
+            </Button>
           </VStack>
         </VStack>
       </VStack>
+      
     </Box>
   );
 }
