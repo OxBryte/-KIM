@@ -9,6 +9,7 @@ import {
   VStack,
   useToast,
 } from "@chakra-ui/react";
+import { FaXTwitter, FaTelegram } from "react-icons/fa6";
 import ContainLayout from "./layout/container";
 import copyToClipboard from "./util";
 
@@ -22,9 +23,23 @@ export default function Home() {
           <Text fontWeight={800} fontSize={24} color="#9971D4">
             $KIM
           </Text>
-          <Button px="32px" bg="#9971D4" _hover={{ bg: "brand.100" }}>
-            Buy Now
-          </Button>
+          <Flex align="center" gap="12px">
+            <Box
+              bg="brand.100"
+              px="13px"
+              py="12px"
+              rounded="full"
+              as="a"
+              href="/"
+              target="_blank"
+              _hover={{ bg: "#9971D4", color: "white" }}
+            >
+              <FaXTwitter size={20} />
+            </Box>
+            <Button px="32px" bg="#9971D4" _hover={{ bg: "brand.100" }}>
+              Buy Now
+            </Button>
+          </Flex>
         </Flex>
       </ContainLayout>
       <Flex align="center" justify="center" py="80px" w="full" px="24px">
@@ -44,7 +59,7 @@ export default function Home() {
         <VStack gap="24px" align="center">
           <Heading
             className="text-color1"
-            fontSize={[32, 64]}
+            fontSize={[30, 64]}
             color="white"
             letterSpacing={2}
           >
@@ -70,12 +85,15 @@ export default function Home() {
               bg="white"
               px="16px"
               py="6px"
-              cursor='pointer'
+              cursor="pointer"
               fontSize={24}
               onClick={() =>
                 copyToClipboard(
                   "0xE1aBD004250AC8D1F199421d647e01d094FAa180",
                   toast({
+                    containerStyle: {
+                        bg: '#9971D4',
+                      },
                     title: "Contract address copied",
                     // description: "We've created your account for you.",
                     status: "success",
@@ -272,7 +290,60 @@ export default function Home() {
           </VStack>
         </VStack>
       </VStack>
-      
+      <Box w="full" py="34px" bg="#9971D4">
+        <ContainLayout>
+          <Flex
+            flexWrap="wrap"
+            gap="64px"
+            align="center"
+            justify="center"
+            w="full"
+          >
+            <Box>
+              <Image src="/kim-footer.png" w="400px" alt="" />
+            </Box>
+            <VStack align={["center", "flex-end"]} gap="32px">
+              <Heading color="white" className="text-color1">
+                Join $KIM Community
+              </Heading>
+              <Flex align="center" gap="12px">
+                <Box
+                  bg="white"
+                  px="13px"
+                  py="12px"
+                  rounded="12px"
+                  as="a"
+                  href="/"
+                  target="_blank"
+                  _hover={{ bg: "#9971D4", color: "white" }}
+                >
+                  <FaXTwitter size={30} />
+                </Box>
+                <Box
+                  bg="white"
+                  px="13px"
+                  py="12px"
+                  rounded="12px"
+                  as="a"
+                  href="/"
+                  target="_blank"
+                  _hover={{ bg: "#9971D4", color: "white" }}
+                >
+                  <FaTelegram size={30} />
+                </Box>
+              </Flex>
+              <Button
+                px="32px"
+                py="24px"
+                bg="white"
+                _hover={{ bg: "brand.100" }}
+              >
+                Buy Now
+              </Button>
+            </VStack>
+          </Flex>
+        </ContainLayout>
+      </Box>
     </Box>
   );
 }

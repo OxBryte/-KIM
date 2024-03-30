@@ -1,4 +1,4 @@
-function copyToClipboard(text, callback) {
+function copyToClipboard(text) {
     const textarea = document.createElement('textarea');
     textarea.innerText = text;
     document.body.appendChild(textarea);
@@ -6,10 +6,6 @@ function copyToClipboard(text, callback) {
     document.execCommand('copy');
     document.body.removeChild(textarea);
 
-    // If a callback is provided, call it with the copied text
-    if (callback) {
-        callback(text);
-    }
 }
 
 export default copyToClipboard
