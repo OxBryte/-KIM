@@ -14,6 +14,8 @@ import ContainLayout from "./layout/container";
 import copyToClipboard from "./util";
 
 export default function Home() {
+  
+  const CA = 'Coming soon'
   const toast = useToast();
 
   return (
@@ -89,12 +91,12 @@ export default function Home() {
               fontSize={24}
               onClick={() =>
                 copyToClipboard(
-                  "0xE1aBD004250AC8D1F199421d647e01d094FAa180",
+                  `${CA}`,
                   toast({
                     containerStyle: {
                         bg: '#9971D4',
                       },
-                    title: "Contract address copied",
+                    title:  `${CA}`,
                     // description: "We've created your account for you.",
                     status: "success",
                     duration: 9000,
@@ -325,7 +327,7 @@ export default function Home() {
                   py="12px"
                   rounded="12px"
                   as="a"
-                  href="/"
+                  href="https://t.me/kimthepet"
                   target="_blank"
                   _hover={{ bg: "#9971D4", color: "white" }}
                 >
