@@ -78,7 +78,7 @@ export default function Home() {
               h="fit-content"
               fontSize={[14, 24]}
             >
-              0xE1aBD004250AC8D1F199421d647e01d094FAa180
+              {CA}
             </Box>
             <Box
               rounded="full"
