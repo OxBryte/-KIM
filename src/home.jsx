@@ -32,7 +32,7 @@ export default function Home() {
               py="12px"
               rounded="full"
               as="a"
-              href="/"
+              href="https://twitter.com/KimthePet"
               target="_blank"
               _hover={{ bg: "#9971D4", color: "white" }}
             >
@@ -315,7 +315,7 @@ export default function Home() {
                   py="12px"
                   rounded="12px"
                   as="a"
-                  href="/"
+                  href="https://twitter.com/KimthePet"
                   target="_blank"
                   _hover={{ bg: "#9971D4", color: "white" }}
                 >
