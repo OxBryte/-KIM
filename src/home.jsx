@@ -109,7 +109,7 @@ export default function Home() {
           </Flex>
         </VStack>
       </VStack>
-      <VStack align="center" my="60px" w="full" gap="40px" px="32px">
+      {/* <VStack align="center" my="60px" w="full" gap="40px" px="32px">
         <Heading fontSize={[32, 64]}>Tokenomics</Heading>
         <Flex
           align="center"
@@ -122,13 +122,13 @@ export default function Home() {
         >
           <Heading>Coming soon</Heading>
         </Flex>
-        {/* <Box maxW="500px" display={{ base: "block", lg: "none" }}>
+        <Box maxW="500px" display={{ base: "block", lg: "none" }}>
           <Image src="/tokenomics.png" alt="" />
         </Box>
         <Box maxW="920px" display={{ base: "none", lg: "block" }}>
           <Image src="/tokenomics-desktop.png" alt="" />
-        </Box> */}
-      </VStack>
+        </Box>
+      </VStack> */}
       <Box
         w="full"
         bg="#9971D4"
