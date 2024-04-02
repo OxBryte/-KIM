@@ -14,8 +14,7 @@ import ContainLayout from "./layout/container";
 import copyToClipboard from "./util";
 
 export default function Home() {
-  
-  const CA = 'Coming soon'
+  const CA = "Coming soon";
   const toast = useToast();
 
   return (
@@ -94,9 +93,9 @@ export default function Home() {
                   `${CA}`,
                   toast({
                     containerStyle: {
-                        bg: '#9971D4',
-                      },
-                    title:  `${CA}`,
+                      bg: "#9971D4",
+                    },
+                    title: `${CA}`,
                     // description: "We've created your account for you.",
                     status: "success",
                     duration: 9000,
@@ -112,12 +111,23 @@ export default function Home() {
       </VStack>
       <VStack align="center" my="60px" w="full" gap="40px" px="32px">
         <Heading fontSize={[32, 64]}>Tokenomics</Heading>
-        <Box maxW="500px" display={{ base: "block", lg: "none" }}>
+        <Flex
+          align="center"
+          justify="center"
+          w="full"
+          px="24px"
+          py="44px"
+          bg="#9971D4"
+          color="white"
+        >
+          <Heading>Coming soon</Heading>
+        </Flex>
+        {/* <Box maxW="500px" display={{ base: "block", lg: "none" }}>
           <Image src="/tokenomics.png" alt="" />
         </Box>
         <Box maxW="920px" display={{ base: "none", lg: "block" }}>
           <Image src="/tokenomics-desktop.png" alt="" />
-        </Box>
+        </Box> */}
       </VStack>
       <Box
         w="full"
