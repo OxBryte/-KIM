@@ -14,7 +14,7 @@ import ContainLayout from "./layout/container";
 import copyToClipboard from "./util";
 
 export default function Home() {
-  const CA = "Coming soon";
+  const CA = "DfcmHEswFESV3t32EwkKLdaaepNijkACSkxRhCSNFwCd";
   const toast = useToast();
 
   return (
