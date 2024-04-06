@@ -303,7 +303,9 @@ export default function Home() {
             <Text textAlign="center" color="#9971D4" fontSize={24}>
               Trade $SOL for $KIM on Jupiter
             </Text>
-            <Button px="32px" bg="#9971D4" _hover={{ bg: "brand.100" }}>
+            <Button as="a"
+                  href="https://dexscreener.com/solana/5t2gpmw7ezycs7sysmrwasz9u8krmavn8wqvdt7xdfce"
+                  target="_blank" px="32px" bg="#9971D4" _hover={{ bg: "brand.100" }}>
               TRADE
             </Button>
           </VStack>
