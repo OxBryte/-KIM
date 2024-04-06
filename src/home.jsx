@@ -14,7 +14,7 @@ import ContainLayout from "./layout/container";
 import copyToClipboard from "./util";
 
 export default function Home() {
-  const CA = "Coming soon";
+  const CA = "DfcmHEswFESV3t32EwkKLdaaepNijkACSkxRhCSNFwCd";
   const toast = useToast();
 
   return (
@@ -37,7 +37,14 @@ export default function Home() {
             >
               <FaXTwitter size={20} />
             </Box>
-            <Button px="32px" bg="#9971D4" _hover={{ bg: "brand.100" }}>
+            <Button
+              px="32px"
+              bg="#9971D4"
+              as="a"
+              href="https://dexscreener.com/solana/5t2gpmw7ezycs7sysmrwasz9u8krmavn8wqvdt7xdfce"
+              target="_blank"
+              _hover={{ bg: "brand.100" }}
+            >
               Buy Now
             </Button>
           </Flex>
@@ -345,6 +352,9 @@ export default function Home() {
                 </Box>
               </Flex>
               <Button
+                as="a"
+                href="https://dexscreener.com/solana/5t2gpmw7ezycs7sysmrwasz9u8krmavn8wqvdt7xdfce"
+                target="_blank"
                 px="32px"
                 py="24px"
                 bg="white"
